@@ -1,0 +1,1930 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\katri\\my-api-tests-project\\playwright.config.js",
+    "rootDir": "C:/Users/katri/my-api-tests-project/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/katri/my-api-tests-project/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "api-tests",
+        "name": "api-tests",
+        "testDir": "C:/Users/katri/my-api-tests-project/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.js$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api.js\\challenges.spec.js",
+      "file": "api.js/challenges.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Challenges Tests @challenges",
+          "file": "api.js/challenges.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /challenges - получение списка всех challenges @smoke @get",
+              "ok": false,
+              "tags": [
+                "challenges",
+                "smoke",
+                "get"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 906,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at ChallengesController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at ChallengesController.validateChallengesResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\ChallengesController.js:23:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\challenges.spec.js:11:26",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at ChallengesController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at ChallengesController.validateChallengesResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\ChallengesController.js:23:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\challenges.spec.js:11:26\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:01.488Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ef4e847a24fdbe6afe87-36f442c2e7fa43fc992d",
+              "file": "api.js/challenges.spec.js",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "POST /challenger - создание нового challenger токена @smoke @post",
+              "ok": false,
+              "tags": [
+                "challenges",
+                "smoke",
+                "post"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1003,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at ChallengesController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\challenges.spec.js:19:26",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 7,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 7,
+                            "line": 27
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m\n\u001b[2m    at ChallengesController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\challenges.spec.js:19:26\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:04.526Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 7,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ef4e847a24fdbe6afe87-e2cd51807b8dafd93319",
+              "file": "api.js/challenges.spec.js",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "GET /heartbeat - проверка доступности API @smoke @get",
+              "ok": true,
+              "tags": [
+                "challenges",
+                "smoke",
+                "get"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1141,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:07.301Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ef4e847a24fdbe6afe87-e148b779652dffee77e2",
+              "file": "api.js/challenges.spec.js",
+              "line": 23,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api.js\\todos-delete.spec.js",
+      "file": "api.js/todos-delete.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TODO API - DELETE запросы @todos @delete",
+          "file": "api.js/todos-delete.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "DELETE /todos/:id - удаление существующего TODO @smoke",
+              "ok": false,
+              "tags": [
+                "todos",
+                "delete",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 1242,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:15:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 7,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 7,
+                            "line": 27
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:15:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:01.141Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 7,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6d2745657da5db0effce-766a191217404846425d",
+              "file": "api.js/todos-delete.spec.js",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "DELETE /todos/:id - попытка удалить несуществующий TODO @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "delete",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 979,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:28:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:28:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:04.727Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6d2745657da5db0effce-c484a560ef3ed89a07ff",
+              "file": "api.js/todos-delete.spec.js",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "DELETE /todos/:id - повторное удаление уже удаленного TODO @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "delete",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 1382,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:45:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 7,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 7,
+                            "line": 27
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:45:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:07.507Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 7,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6d2745657da5db0effce-364462e5b69a1a5fbcfc",
+              "file": "api.js/todos-delete.spec.js",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "DELETE /todos/:id - проверка что другие TODO не затронуты @isolation",
+              "ok": false,
+              "tags": [
+                "todos",
+                "delete",
+                "isolation"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 1757,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:72:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 7,
+                          "line": 27
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 7,
+                            "line": 27
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m   expectStatus(actualStatus\u001b[33m,\u001b[39m expectedStatus) {\n \u001b[90m 26 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(expectedStatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m       expect(expectedStatus)\u001b[33m.\u001b[39mtoContain(actualStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     } \u001b[36melse\u001b[39m {\n \u001b[90m 29 |\u001b[39m       expect(actualStatus)\u001b[33m.\u001b[39mtoBe(expectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectStatus (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:27:7)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-delete.spec.js:72:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:10.613Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 7,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6d2745657da5db0effce-ac8a580ab8e3d2c1a483",
+              "file": "api.js/todos-delete.spec.js",
+              "line": 53,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api.js\\todos-get.spec.js",
+      "file": "api.js/todos-get.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TODO API - GET запросы @todos @get",
+          "file": "api.js/todos-get.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /todos - получение списка всех TODO @smoke",
+              "ok": false,
+              "tags": [
+                "todos",
+                "get",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1232,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:9:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:9:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:01.048Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-9802594eb285a367f0ce",
+              "file": "api.js/todos-get.spec.js",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "GET /todos/:id - получение TODO по ID @smoke",
+              "ok": false,
+              "tags": [
+                "todos",
+                "get",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1151,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:23:34",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js",
+                          "column": 34,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     expect(getResult\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     expect(getResult\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoContain(\u001b[32m'Test TODO'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m   test(\u001b[32m'GET /todos/:id - получение несуществующего TODO @negative'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ todoController }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js",
+                            "column": 34,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     expect(getResult\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     expect(getResult\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoContain(\u001b[32m'Test TODO'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m   test(\u001b[32m'GET /todos/:id - получение несуществующего TODO @negative'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ todoController }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:23:34\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Created: { id: \u001b[33m11\u001b[39m, title: \u001b[32m'Test TODO'\u001b[39m, doneStatus: \u001b[33mfalse\u001b[39m, description: \u001b[32m'Test'\u001b[39m }\n"
+                        },
+                        {
+                          "text": "GET Response: {\n  todos: [\n    {\n      id: \u001b[33m11\u001b[39m,\n      title: \u001b[32m'Test TODO'\u001b[39m,\n      doneStatus: \u001b[33mfalse\u001b[39m,\n      description: \u001b[32m'Test'\u001b[39m\n    }\n  ]\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:04.573Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js",
+                        "column": 34,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-e75034453b7e23dce85d",
+              "file": "api.js/todos-get.spec.js",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "GET /todos/:id - получение несуществующего TODO @negative",
+              "ok": true,
+              "tags": [
+                "todos",
+                "get",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1159,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "GET non-existent TODO status: \u001b[33m404\u001b[39m\n"
+                        },
+                        {
+                          "text": "Error response: { errorMessages: [ \u001b[32m'Could not find an instance with todos/99999'\u001b[39m ] }\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to parse error response: ReferenceError: expect is not defined\n    at TodoController.expectProperty \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mtests\\controllers\\BaseController.js:34:5\u001b[90m)\u001b[39m\n    at TodoController.validateErrorResponse \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mtests\\controllers\\TodoController.js:64:10\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\katri\\my-api-tests-project\\\u001b[39mtests\\api.js\\todos-get.spec.js:34:22\n    at \u001b[90mC:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\workerMain.js:304:9\n    at \u001b[90mC:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\testInfo.js:289:11\n    at TimeoutManager.withRunnable \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\timeoutManager.js:67:14\u001b[90m)\u001b[39m\n    at TestInfoImpl._runWithTimeout \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\testInfo.js:287:7\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\workerMain.js:302:7\n    at WorkerMain._runTest \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\workerMain.js:277:5\u001b[90m)\u001b[39m\n    at WorkerMain.runTestGroup \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\worker\\workerMain.js:193:11\u001b[90m)\u001b[39m\n    at process.<anonymous> \u001b[90m(C:\\Users\\katri\\my-api-tests-project\\\u001b[39mnode_modules\\\u001b[4mplaywright\u001b[24m\\lib\\common\\process.js:65:22\u001b[90m)\u001b[39m\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:07.508Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-4b67bb84ae1d4da82646",
+              "file": "api.js/todos-get.spec.js",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "GET /todos?doneStatus=true - фильтрация по статусу выполнения @filter",
+              "ok": false,
+              "tags": [
+                "todos",
+                "get",
+                "filter"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 649,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:62:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:62:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:08.691Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-812e11fab72e17903c42",
+              "file": "api.js/todos-get.spec.js",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "GET /todos?doneStatus=false - фильтрация невыполненных TODO @filter",
+              "ok": false,
+              "tags": [
+                "todos",
+                "get",
+                "filter"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1469,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:80:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-get.spec.js:80:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:11.079Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-ed98c2ed7c2a1a7eab16",
+              "file": "api.js/todos-get.spec.js",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "HEAD /todos - проверка заголовков без тела ответа @headers",
+              "ok": true,
+              "tags": [
+                "todos",
+                "get",
+                "headers"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1067,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:14.310Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-f58a24deb42d26f5ba99",
+              "file": "api.js/todos-get.spec.js",
+              "line": 86,
+              "column": 7
+            },
+            {
+              "title": "OPTIONS /todos - получение доступных методов @options",
+              "ok": true,
+              "tags": [
+                "todos",
+                "get",
+                "options"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1236,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:15.396Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-4e6a6c9a47ed7b4737ee",
+              "file": "api.js/todos-get.spec.js",
+              "line": 94,
+              "column": 7
+            },
+            {
+              "title": "GET /todos поддерживает XML формат @headers",
+              "ok": true,
+              "tags": [
+                "todos",
+                "get",
+                "headers"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 197,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:16.639Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "10a7f9100edc08f46742-bba4bd2c8a22b7e6daae",
+              "file": "api.js/todos-get.spec.js",
+              "line": 109,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api.js\\todos-patch.spec.js",
+      "file": "api.js/todos-patch.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TODO API - PATCH запросы @todos @patch",
+          "file": "api.js/todos-patch.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "PATCH /todos/:id - частичное обновление title @smoke",
+              "ok": false,
+              "tags": [
+                "todos",
+                "patch",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1230,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:22:27",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                          "column": 27,
+                          "line": 22
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mid)\u001b[33m.\u001b[39mtoBe(createdTodoId)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdoneStatus)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                            "column": 27,
+                            "line": 22
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mid)\u001b[33m.\u001b[39mtoBe(createdTodoId)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdoneStatus)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:22:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:01.402Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                        "column": 27,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "95df6bfc57297d7ec709-8fadad6aa6b5e52bf812",
+              "file": "api.js/todos-patch.spec.js",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "PATCH /todos/:id - частичное обновление doneStatus @status",
+              "ok": false,
+              "tags": [
+                "todos",
+                "patch",
+                "status"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1106,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:33:27",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                          "column": 27,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdescription)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdescription)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                            "column": 27,
+                            "line": 33
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdescription)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdescription)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:33:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:04.871Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                        "column": 27,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "95df6bfc57297d7ec709-50c14c1482506c70973b",
+              "file": "api.js/todos-patch.spec.js",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "PATCH /todos/:id - частичное обновление description @description",
+              "ok": false,
+              "tags": [
+                "todos",
+                "patch",
+                "description"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1400,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:45:27",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                          "column": 27,
+                          "line": 45
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdescription)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mdescription)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdoneStatus)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                            "column": 27,
+                            "line": 45
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n\u001b[0m \u001b[90m 43 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdescription)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mdescription)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdoneStatus)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:45:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:07.754Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                        "column": 27,
+                        "line": 45
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "95df6bfc57297d7ec709-693f6f1630b89fbaae00",
+              "file": "api.js/todos-patch.spec.js",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "PATCH /todos/:id - обновление нескольких полей @multiple",
+              "ok": false,
+              "tags": [
+                "todos",
+                "patch",
+                "multiple"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1479,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:59:27",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                          "column": 27,
+                          "line": 59
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 57 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdescription)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mdescription)\u001b[33m;\u001b[39m\n \u001b[90m 62 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdoneStatus)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                            "column": 27,
+                            "line": 59
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n\u001b[0m \u001b[90m 57 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(createdTodoId\u001b[33m,\u001b[39m patchData)\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtitle)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mtitle)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdescription)\u001b[33m.\u001b[39mtoBe(patchData\u001b[33m.\u001b[39mdescription)\u001b[33m;\u001b[39m\n \u001b[90m 62 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdoneStatus)\u001b[33m.\u001b[39mtoBe(originalTodo\u001b[33m.\u001b[39mdoneStatus)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:59:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:10.888Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                        "column": 27,
+                        "line": 59
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "95df6bfc57297d7ec709-6ac5014c5e086adcc81b",
+              "file": "api.js/todos-patch.spec.js",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "PATCH /todos/:id - попытка обновить несуществующий TODO @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "patch",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1393,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:70:27",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                          "column": 27,
+                          "line": 70
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 68 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(\u001b[35m99999\u001b[39m\u001b[33m,\u001b[39m { title\u001b[33m:\u001b[39m \u001b[32m'Patched'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 69 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 70 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m404\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 71 |\u001b[39m     todoController\u001b[33m.\u001b[39mvalidateErrorResponse(result\u001b[33m.\u001b[39mdata)\u001b[33m;\u001b[39m\n \u001b[90m 72 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39merrorMessages[\u001b[35m0\u001b[39m])\u001b[33m.\u001b[39mtoContain(\u001b[32m'No such todo entity instance'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                            "column": 27,
+                            "line": 70
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m405\u001b[39m\n\n\u001b[0m \u001b[90m 68 |\u001b[39m     \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m todoController\u001b[33m.\u001b[39mpatchTodo(\u001b[35m99999\u001b[39m\u001b[33m,\u001b[39m { title\u001b[33m:\u001b[39m \u001b[32m'Patched'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 69 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 70 |\u001b[39m     expect(result\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[35m404\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 71 |\u001b[39m     todoController\u001b[33m.\u001b[39mvalidateErrorResponse(result\u001b[33m.\u001b[39mdata)\u001b[33m;\u001b[39m\n \u001b[90m 72 |\u001b[39m     expect(result\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39merrorMessages[\u001b[35m0\u001b[39m])\u001b[33m.\u001b[39mtoContain(\u001b[32m'No such todo entity instance'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js:70:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:14.000Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-patch.spec.js",
+                        "column": 27,
+                        "line": 70
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "95df6bfc57297d7ec709-12d6c7f2a2fcae721553",
+              "file": "api.js/todos-patch.spec.js",
+              "line": 65,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api.js\\todos-post.spec.js",
+      "file": "api.js/todos-post.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TODO API - POST запросы @todos @post",
+          "file": "api.js/todos-post.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /todos - создание нового TODO @smoke",
+              "ok": true,
+              "tags": [
+                "todos",
+                "post",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 435,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:08.476Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-30c3a627e464c611cd55",
+              "file": "api.js/todos-post.spec.js",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - создание TODO только с обязательными полями @minimal",
+              "ok": true,
+              "tags": [
+                "todos",
+                "post",
+                "minimal"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 438,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:08.924Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-a1012ca66ef70d1aa8d4",
+              "file": "api.js/todos-post.spec.js",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - создание TODO без обязательного поля title @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "post",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 398,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-post.spec.js:31:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-post.spec.js:31:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:09.375Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-8f89b1001d90f24c0d4b",
+              "file": "api.js/todos-post.spec.js",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - doneStatus не обязательное поле",
+              "ok": true,
+              "tags": [
+                "todos",
+                "post"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1224,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:11.465Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-b9779c444de2c2bf5ed2",
+              "file": "api.js/todos-post.spec.js",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - создание TODO с пустым title @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "post",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 417,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-post.spec.js:55:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-post.spec.js:55:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:12.705Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-f038ee0e59d5feb617e2",
+              "file": "api.js/todos-post.spec.js",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - невалидный doneStatus возвращает 400 @negative",
+              "ok": true,
+              "tags": [
+                "todos",
+                "post",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 901,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:14.737Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-52ee9c346fa2911171b9",
+              "file": "api.js/todos-post.spec.js",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - создание TODO с очень длинным title @boundary",
+              "ok": true,
+              "tags": [
+                "todos",
+                "post",
+                "boundary"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 389,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:15.655Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-3ab27872861775b34fc3",
+              "file": "api.js/todos-post.spec.js",
+              "line": 74,
+              "column": 7
+            },
+            {
+              "title": "POST /todos - создание TODO со слишком длинным title @negative @boundary",
+              "ok": false,
+              "tags": [
+                "todos",
+                "post",
+                "negative",
+                "boundary"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 571,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-post.spec.js:94:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-post.spec.js:94:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:16.055Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c262ef3b1dfb809734f9-df8ea820ab47fd2511b0",
+              "file": "api.js/todos-post.spec.js",
+              "line": 86,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api.js\\todos-put.spec.js",
+      "file": "api.js/todos-put.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TODO API - PUT запросы @todos @put",
+          "file": "api.js/todos-put.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "PUT /todos/:id - полное обновление TODO @smoke",
+              "ok": true,
+              "tags": [
+                "todos",
+                "put",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1412,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:13.980Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "654c4e6ed014988d7507-a3e095f19c1d6382eedb",
+              "file": "api.js/todos-put.spec.js",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "PUT /todos/:id - обновление только обязательных полей @minimal",
+              "ok": true,
+              "tags": [
+                "todos",
+                "put",
+                "minimal"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 598,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:15.445Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "654c4e6ed014988d7507-864af3dc7baf35a35ed2",
+              "file": "api.js/todos-put.spec.js",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "PUT /todos/:id - обновление несуществующего TODO @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "put",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 771,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-put.spec.js:53:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-put.spec.js:53:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:16.057Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "654c4e6ed014988d7507-a028830530d96305ff03",
+              "file": "api.js/todos-put.spec.js",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "PUT /todos/:id - обновление без обязательного поля title @negative",
+              "ok": false,
+              "tags": [
+                "todos",
+                "put",
+                "negative"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1244,
+                      "error": {
+                        "message": "ReferenceError: expect is not defined",
+                        "stack": "ReferenceError: expect is not defined\n    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\n    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\n    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-put.spec.js:65:20",
+                        "location": {
+                          "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                          "column": 5,
+                          "line": 34
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                            "column": 5,
+                            "line": 34
+                          },
+                          "message": "ReferenceError: expect is not defined\n\n\u001b[90m   at \u001b[39mcontrollers\\BaseController.js:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   expectProperty(object\u001b[33m,\u001b[39m property\u001b[33m,\u001b[39m value \u001b[33m=\u001b[39m undefined) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     expect(object)\u001b[33m.\u001b[39mtoHaveProperty(property)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mif\u001b[39m (value \u001b[33m!==\u001b[39m undefined) {\n \u001b[90m 36 |\u001b[39m       expect(object[property])\u001b[33m.\u001b[39mtoBe(value)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m     }\u001b[0m\n\u001b[2m    at TodoController.expectProperty (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js:34:5)\u001b[22m\n\u001b[2m    at TodoController.validateErrorResponse (C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\TodoController.js:64:10)\u001b[22m\n\u001b[2m    at C:\\Users\\katri\\my-api-tests-project\\tests\\api.js\\todos-put.spec.js:65:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:18.141Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\katri\\my-api-tests-project\\tests\\controllers\\BaseController.js",
+                        "column": 5,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "654c4e6ed014988d7507-1074bf508fe690398c73",
+              "file": "api.js/todos-put.spec.js",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "PUT /todos/:id - изменение статуса выполнения @status",
+              "ok": true,
+              "tags": [
+                "todos",
+                "put",
+                "status"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api-tests",
+                  "projectName": "api-tests",
+                  "results": [
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1491,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-13T13:48:20.683Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "654c4e6ed014988d7507-5699d804060b7fb78660",
+              "file": "api.js/todos-put.spec.js",
+              "line": 69,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-13T13:47:58.687Z",
+    "duration": 23541.186999999998,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 20,
+    "flaky": 0
+  }
+}
